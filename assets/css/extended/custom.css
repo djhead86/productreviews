@@ -1,0 +1,320 @@
+/* ============================================================
+   KODIAK DEN — Custom theme overrides for PaperMod
+   ============================================================ */
+
+/* ----- Brand color palette ----- */
+:root {
+    --kd-accent:      #c47c2b;   /* amber/copper — the "kodiak" warmth */
+    --kd-accent-dark: #a86520;
+    --kd-accent-bg:   #fdf6ed;   /* pale amber wash for cards/highlights */
+    --kd-green:       #2e7d50;   /* subtle "approved/yes" green */
+    --kd-red:         #c0392b;   /* subtle "no" red */
+    --kd-radius:      10px;
+    --kd-shadow:      0 2px 12px rgba(0,0,0,0.08);
+}
+
+:root[data-theme="dark"] {
+    --kd-accent-bg:   #2a2218;
+}
+
+/* ----- Nav: accent the active/hover links ----- */
+.nav a:hover,
+.menu a:hover {
+    color: var(--kd-accent) !important;
+}
+
+/* ----- Header logo text ----- */
+.logo a,
+#top .logo a {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* ----- Home info box ----- */
+.home-info {
+    border-left: 4px solid var(--kd-accent);
+    padding-left: 24px;
+}
+
+.home-info .title {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* ----- Post list cards ----- */
+.post-entry {
+    border-radius: var(--kd-radius);
+    transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.post-entry:hover {
+    box-shadow: var(--kd-shadow);
+    transform: translateY(-2px);
+}
+
+/* ----- Post title links ----- */
+.entry-content h2 a,
+.post-entry h2 a,
+.entry-header h1 a,
+h1.post-title a {
+    text-decoration: none;
+}
+
+.entry-content h2 a:hover,
+.post-entry h2 a:hover {
+    color: var(--kd-accent);
+}
+
+/* ----- Article headings ----- */
+.post-content h2 {
+    border-bottom: 2px solid var(--kd-accent);
+    padding-bottom: 6px;
+    margin-top: 2rem;
+    font-size: 1.35rem;
+}
+
+.post-content h3 {
+    color: var(--kd-accent);
+    font-size: 1.15rem;
+    margin-top: 1.75rem;
+}
+
+/* ----- Inline links — accent color ----- */
+.post-content a {
+    color: var(--kd-accent);
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.15s;
+}
+
+.post-content a:hover {
+    text-decoration-color: var(--kd-accent);
+}
+
+/* ----- Horizontal rules (used between sections in articles) ----- */
+.post-content hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2rem 0;
+}
+
+/* ----- Breadcrumbs ----- */
+.breadcrumbs a {
+    color: var(--kd-accent) !important;
+}
+
+/* ============================================================
+   PRODUCT BOX SHORTCODE  (.kd-product-box)
+   ============================================================ */
+.kd-product-box {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--kd-accent);
+    border-radius: var(--kd-radius);
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: var(--kd-shadow);
+}
+
+.kd-product-box .kd-product-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.35rem 0;
+    color: var(--primary);
+}
+
+.kd-product-box .kd-product-meta {
+    font-size: 0.88rem;
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+}
+
+.kd-product-box .kd-product-verdict {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+    color: var(--content);
+}
+
+/* "Check price" CTA button */
+.kd-btn {
+    display: inline-block;
+    background: var(--kd-accent);
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 6px;
+    text-decoration: none !important;
+    transition: background 0.15s;
+    letter-spacing: 0.01em;
+}
+
+.kd-btn:hover {
+    background: var(--kd-accent-dark) !important;
+    color: #fff !important;
+}
+
+/* Pro/con badge inside product box */
+.kd-tag-good {
+    display: inline-block;
+    background: #e6f4ed;
+    color: var(--kd-green);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.kd-tag-bad {
+    display: inline-block;
+    background: #fdecea;
+    color: var(--kd-red);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+:root[data-theme="dark"] .kd-tag-good { background: #1a3325; }
+:root[data-theme="dark"] .kd-tag-bad  { background: #3a1a18; }
+
+/* ============================================================
+   QUICK PICKS TABLE  (used in articles as a summary box)
+   ============================================================ */
+.kd-quick-picks {
+    background: var(--kd-accent-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--kd-radius);
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.kd-quick-picks h4 {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--kd-accent);
+    font-weight: 700;
+}
+
+.kd-quick-picks ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.kd-quick-picks ul li {
+    padding: 0.3rem 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.kd-quick-picks ul li:last-child {
+    border-bottom: none;
+}
+
+.kd-quick-picks ul li strong {
+    color: var(--primary);
+}
+
+/* ============================================================
+   COMPARISON TABLES
+   ============================================================ */
+.post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.93rem;
+    margin: 1.5rem 0;
+    border-radius: var(--kd-radius);
+    overflow: hidden;
+    box-shadow: var(--kd-shadow);
+}
+
+.post-content table thead th {
+    background: var(--kd-accent);
+    color: #fff;
+    font-weight: 700;
+    padding: 0.7rem 1rem;
+    text-align: left;
+}
+
+.post-content table tbody tr:nth-child(even) {
+    background: var(--kd-accent-bg);
+}
+
+.post-content table tbody tr:hover {
+    background: #f5e8d4;
+}
+
+:root[data-theme="dark"] .post-content table tbody tr:hover {
+    background: #332920;
+}
+
+.post-content table td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+/* ============================================================
+   AFFILIATE DISCLOSURE
+   ============================================================ */
+.post-content em:last-of-type,
+.kd-disclosure {
+    display: block;
+    background: var(--kd-accent-bg);
+    border-left: 3px solid var(--kd-accent);
+    border-radius: 0 6px 6px 0;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    color: var(--secondary);
+    margin-top: 2rem;
+    font-style: normal;
+}
+
+/* ============================================================
+   TOC STYLING
+   ============================================================ */
+.toc details summary {
+    font-weight: 700;
+    color: var(--kd-accent);
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.toc ul {
+    font-size: 0.9rem;
+}
+
+.toc a {
+    color: var(--primary) !important;
+}
+
+.toc a:hover {
+    color: var(--kd-accent) !important;
+}
+
+/* ============================================================
+   READ TIME + META  — subtle but present
+   ============================================================ */
+.post-meta {
+    font-size: 0.82rem;
+    color: var(--secondary);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    border-top: 1px solid var(--border);
+}
+
+footer a {
+    color: var(--kd-accent) !important;
+}

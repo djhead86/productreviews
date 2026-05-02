@@ -1,0 +1,44 @@
+{{/*
+  Usage:
+  {{< product-box
+      title="Audio-Technica ATR2100x-USB"
+      badge="Best Overall"
+      price="~$79"
+      connection="USB + XLR"
+      verdict="A dynamic mic that rejects noise brilliantly and grows with your setup. Our top pick for home podcasters."
+      pros="Dual USB+XLR,Great noise rejection,Warm sound"
+      cons="Slightly large for travel"
+      url="https://www.amazon.com/s?k=audio-technica+atr2100x-usb"
+  >}}
+*/}}
+
+{{ $pros := split (.Get "pros") "," }}
+{{ $cons := split (.Get "cons") "," }}
+
+<div class="kd-product-box">
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem;">
+    <p class="kd-product-title">{{ .Get "title" }}</p>
+    {{ with .Get "badge" }}
+    <span style="background:var(--kd-accent);color:#fff;font-size:0.75rem;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap;align-self:center;">{{ . }}</span>
+    {{ end }}
+  </div>
+
+  <p class="kd-product-meta">
+    {{ with .Get "price" }}<strong>Price:</strong> {{ . }}{{ end }}
+    {{ if and (.Get "price") (.Get "connection") }} &nbsp;·&nbsp; {{ end }}
+    {{ with .Get "connection" }}<strong>Connection:</strong> {{ . }}{{ end }}
+  </p>
+
+  <p class="kd-product-verdict">{{ .Get "verdict" }}</p>
+
+  {{ if .Get "pros" }}
+  <div style="margin-bottom:0.75rem; display:flex; flex-wrap:wrap; gap:4px;">
+    {{ range $pros }}<span class="kd-tag-good">✓ {{ . | trim " " }}</span>{{ end }}
+    {{ range $cons }}<span class="kd-tag-bad">✗ {{ . | trim " " }}</span>{{ end }}
+  </div>
+  {{ end }}
+
+  {{ with .Get "url" }}
+  <a href="{{ . }}" class="kd-btn" target="_blank" rel="nofollow noopener">Check price on Amazon →</a>
+  {{ end }}
+</div>

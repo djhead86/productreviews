@@ -19,18 +19,16 @@ That said, buying the wrong cheap mic will hurt you. Here are the ones worth buy
 
 ## Quick Picks
 
-- **Best overall:** [Audio-Technica ATR2100x-USB](https://www.amazon.com/s?k=audio-technica+atr2100x-usb) — ~$79
-- **Best USB plug-and-play:** [Samson Q2U](https://www.amazon.com/s?k=samson+q2u) — ~$70
-- **Best for quiet rooms:** [Blue Snowball iCE](https://www.amazon.com/s?k=blue+snowball+ice) — ~$50
-- **Best XLR upgrade path:** [Behringer XM8500](https://www.amazon.com/s?k=behringer+xm8500) — ~$20 (XLR only)
+- **Best overall:** Audio-Technica ATR2100x-USB — ~$79
+- **Best USB plug-and-play:** Samson Q2U — ~$70
+- **Best for quiet rooms:** Blue Snowball iCE — ~$50
+- **Best XLR upgrade path:** Behringer XM8500 — ~$20 (XLR only)
 
 ---
 
 ## The Best Podcast Mics Under $100
 
 ### 1. Audio-Technica ATR2100x-USB — Best Overall
-
-**Price:** ~$79 | **Connection:** USB + XLR
 
 This is the mic I recommend to almost everyone starting a podcast. It's a dynamic microphone, which means it's much better at rejecting background noise than a condenser — fans, keyboard clicks, street noise — all of that gets minimized.
 
@@ -40,13 +38,20 @@ The sound is warm, natural, and forgiving of imperfect mic technique. You don't 
 
 **Who it's for:** Anyone recording in a less-than-ideal acoustic environment (most home setups). The dynamic element is significantly more forgiving of room noise than any condenser in this price range.
 
-[Check price on Amazon →](https://www.amazon.com/s?k=audio-technica+atr2100x-usb)
+{{< product-box
+    title="Audio-Technica ATR2100x-USB"
+    badge="Best Overall"
+    price="~$79"
+    connection="USB + XLR"
+    verdict="Warm, forgiving dynamic mic with both USB and XLR outputs. Buy it once and use it forever. The best all-around pick for podcasters starting out."
+    pros="Dual USB+XLR,Excellent noise rejection,Warm natural sound,Upgrade-friendly"
+    cons="Slightly large for travel kits"
+    url="https://www.amazon.com/s?k=audio-technica+atr2100x-usb"
+>}}
 
 ---
 
 ### 2. Samson Q2U — Best USB/XLR Value
-
-**Price:** ~$70 | **Connection:** USB + XLR
 
 The Q2U is almost identical to the ATR2100x in concept — dynamic mic, USB + XLR combo — but it comes with a full accessory bundle including a desk stand, clip, XLR cable, and USB cable. If you're buying your first setup from scratch, the Q2U's bundle makes it the better value.
 
@@ -54,13 +59,20 @@ Sound quality is very close to the ATR2100x. Some people prefer the Q2U's slight
 
 **Who it's for:** First-time podcasters who want everything in one box. The included stand and cable mean you can literally be recording in 10 minutes.
 
-[Check price on Amazon →](https://www.amazon.com/s?k=samson+q2u)
+{{< product-box
+    title="Samson Q2U"
+    badge="Best Value Bundle"
+    price="~$70"
+    connection="USB + XLR"
+    verdict="Comes with stand, clip, USB cable, and XLR cable included. Almost identical sound to the ATR2100x but everything you need is in the box."
+    pros="Full bundle included,Dual USB+XLR,Recording-ready out of the box"
+    cons="Slightly brighter sound (preference thing)"
+    url="https://www.amazon.com/s?k=samson+q2u"
+>}}
 
 ---
 
 ### 3. Blue Snowball iCE — Best for Quiet Rooms
-
-**Price:** ~$50 | **Connection:** USB only
 
 The Snowball iCE is a condenser microphone, which means it picks up more detail — and more of your room. If you're recording in a quiet, acoustically decent space (a carpeted room with furniture, a closet lined with clothes), the iCE will sound noticeably more detailed and airy than a dynamic mic.
 
@@ -68,19 +80,35 @@ The trade-off is that it'll also pick up your air conditioning, keyboard, and ne
 
 **Who it's for:** Podcasters in genuinely quiet, treated spaces who want maximum detail on a small budget. Not recommended for open-plan offices or rooms with hard floors.
 
-[Check price on Amazon →](https://www.amazon.com/s?k=blue+snowball+ice)
+{{< product-box
+    title="Blue Snowball iCE"
+    badge="Best for Quiet Rooms"
+    price="~$50"
+    connection="USB only"
+    verdict="Condenser mic with detailed, airy sound. Only shines in treated spaces — it will pick up every ambient noise in a live room."
+    pros="Very detailed sound,Lowest price on this list,Simple plug-and-play"
+    cons="Picks up room noise,No XLR option,Not for noisy environments"
+    url="https://www.amazon.com/s?k=blue+snowball+ice"
+>}}
 
 ---
 
 ### 4. Behringer XM8500 — The Secret Weapon
 
-**Price:** ~$20 | **Connection:** XLR only
-
 This one requires an audio interface, so it's not truly plug-and-play. But the Behringer XM8500 is genuinely shocking value — it's a dynamic mic that sounds remarkably close to the Shure SM58 (which costs $100) for $20. Podcasters and musicians who know about it are almost evangelical.
 
 If you already have an interface (or you're buying one), the XM8500 is one of the best budget decisions you can make.
 
-[Check price on Amazon →](https://www.amazon.com/s?k=behringer+xm8500)
+{{< product-box
+    title="Behringer XM8500"
+    badge="Best XLR Budget Pick"
+    price="~$20"
+    connection="XLR only"
+    verdict="Shockingly close to the Shure SM58 at a fraction of the price. Requires an audio interface, but if you have one (or plan to get one) this mic is a no-brainer."
+    pros="Incredible value,$20 for SM58-level sound,Solid build quality"
+    cons="XLR only — needs interface,No USB option"
+    url="https://www.amazon.com/s?k=behringer+xm8500"
+>}}
 
 ---
 
