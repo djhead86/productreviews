@@ -12,8 +12,9 @@
   <ul class="kd-project-tags">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
   {{- end }}
   <div class="kd-project-links">
-    {{- with $p.url }}<a class="kd-btn" href="{{ . }}" rel="noopener">Visit site</a>{{ end }}
+    {{- with $p.page }}<a class="kd-btn" href="{{ . | relURL }}">Project page</a>{{ end }}
+    {{- with $p.url }}<a class="kd-btn{{ if $p.page }} kd-btn--ghost{{ end }}" href="{{ . }}" rel="noopener">Visit site</a>{{ end }}
     {{- with $p.repo }}<a class="kd-btn kd-btn--ghost" href="{{ . }}" rel="noopener">GitHub</a>{{ end }}
-    {{- if and (not $p.url) (not $p.repo) }}<span class="kd-project-pending">Still in the den</span>{{ end }}
+    {{- if and (not $p.url) (not $p.repo) (not $p.page) }}<span class="kd-project-pending">Still in the den</span>{{ end }}
   </div>
 </article>

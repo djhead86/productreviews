@@ -1,0 +1,92 @@
+{
+  "source": {
+    "label": "Cortex XQL",
+    "query": "preset = xdr_process\n| filter event_type = ENUM.PROCESS and event_sub_type = ENUM.PROCESS_START and agent_os_type = ENUM.AGENT_OS_WINDOWS\n| filter action_process_image_path in (\"*\\mmc.exe\") and action_process_image_command_line contains \".msc\"\n| filter action_process_image_command_line contains \"\\Users\\\" or action_process_image_command_line contains \"\\Temp\\\" or action_process_image_command_line contains \"\\ProgramData\\\"\n| filter not (action_process_image_command_line contains \"eventvwr.msc /s\" or action_process_image_command_line contains \"CompMgmt.msc\")"
+  },
+  "targets": [
+    {
+      "id": "kql-mde",
+      "label": "Sentinel KQL",
+      "note": "Defender XDR tables",
+      "query": "DeviceProcessEvents\n| where FolderPath endswith \"\\\\mmc.exe\" and ProcessCommandLine contains \".msc\"\n| where ProcessCommandLine contains \"\\\\Users\\\\\" or ProcessCommandLine contains \"\\\\Temp\\\\\" or ProcessCommandLine contains \"\\\\ProgramData\\\\\"\n| where not(ProcessCommandLine contains \"eventvwr.msc /s\" or ProcessCommandLine contains \"CompMgmt.msc\")",
+      "notes": [
+        {
+          "level": "caution",
+          "msg": "The Windows OS condition was dropped: Defender XDR event tables carry no OS column. Results are wider than the source. Join DeviceInfo on DeviceId to restrict by OS."
+        },
+        {
+          "level": "review",
+          "msg": "Cortex ENUM event class (Windows process start events) was rewritten as source DeviceProcessEvents. Event coverage differs between sensors; check that the target collects the same events."
+        },
+        {
+          "level": "review",
+          "msg": "Mapped action_process_image_path → FolderPath (process image path). Path formats differ (device paths, drive letters, case). Check how your sensor records them."
+        }
+      ],
+      "total": 5
+    },
+    {
+      "id": "spl-sysmon",
+      "label": "Splunk SPL",
+      "note": "Sysmon",
+      "query": "index=*\n| search sourcetype=\"XmlWinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=1\n| search Image=\"*\\\\mmc.exe\" CommandLine=\"*.msc*\"\n| search CommandLine=\"*\\\\Users\\\\*\" OR CommandLine=\"*\\\\Temp\\\\*\" OR CommandLine=\"*\\\\ProgramData\\\\*\"\n| search NOT (CommandLine=\"*eventvwr.msc /s*\" OR CommandLine=\"*CompMgmt.msc*\")",
+      "notes": [
+        {
+          "level": "review",
+          "msg": "Sysmon events were selected by sourcetype XmlWinEventLog:Microsoft-Windows-Sysmon/Operational (Splunk Add-on default). Replace index=* with your Sysmon index."
+        },
+        {
+          "level": "review",
+          "msg": "Cortex ENUM event class (Windows process start events) was rewritten as index=* and a selector filter. Event coverage differs between sensors; check that the target collects the same events."
+        },
+        {
+          "level": "review",
+          "msg": "Mapped action_process_image_path → Image (process image path). Path formats differ (device paths, drive letters, case). Check how your sensor records them."
+        }
+      ],
+      "total": 5
+    },
+    {
+      "id": "cql",
+      "label": "CrowdStrike CQL",
+      "note": "Falcon events",
+      "query": "#event_simpleName=ProcessRollup2\n| event_platform = /^Win$/i\n| ImageFileName = /\\\\mmc\\.exe$/i and CommandLine = /\\.msc/i\n| CommandLine = /\\\\Users\\\\/i or CommandLine = /\\\\Temp\\\\/i or CommandLine = /\\\\ProgramData\\\\/i\n| not (CommandLine = /eventvwr\\.msc \\/s/i or CommandLine = /CompMgmt\\.msc/i)",
+      "notes": [
+        {
+          "level": "review",
+          "msg": "Falcon also emits SyntheticProcessRollup2 for processes that started before the sensor. Add it if you need those."
+        },
+        {
+          "level": "review",
+          "msg": "Cortex ENUM event class (Windows process start events) was rewritten as source ProcessRollup2 and a selector filter. Event coverage differs between sensors; check that the target collects the same events."
+        },
+        {
+          "level": "review",
+          "msg": "Mapped action_process_image_path → ImageFileName (process image path). Path formats differ (device paths, drive letters, case). Check how your sensor records them."
+        }
+      ],
+      "total": 5
+    },
+    {
+      "id": "logscale",
+      "label": "LogScale",
+      "note": "ECS fields",
+      "query": "#repo=xdr_process\n| event.category = /^process$/i and event.type = /^start$/i and host.os.type = /^windows$/i\n| process.executable = /\\\\mmc\\.exe$/i and process.command_line = /\\.msc/i\n| process.command_line = /\\\\Users\\\\/i or process.command_line = /\\\\Temp\\\\/i or process.command_line = /\\\\ProgramData\\\\/i\n| not (process.command_line = /eventvwr\\.msc \\/s/i or process.command_line = /CompMgmt\\.msc/i)",
+      "notes": [
+        {
+          "level": "review",
+          "msg": "\"preset = xdr_process\" was carried as a plain source name."
+        },
+        {
+          "level": "review",
+          "msg": "Selected with ECS fields (event.category, event.type, host.os.type). Confirm your parsers populate them."
+        },
+        {
+          "level": "review",
+          "msg": "Cortex ENUM event class (Windows process start events) was rewritten as a selector filter. Event coverage differs between sensors; check that the target collects the same events."
+        }
+      ],
+      "total": 7
+    }
+  ]
+}

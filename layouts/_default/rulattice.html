@@ -1,0 +1,96 @@
+{{- define "main" }}
+{{- $spec := site.Data.rulattice -}}
+{{- $app := "https://rulattice.kodiak-den.com/" -}}
+<article class="rl">
+
+  <header class="rl-head">
+    <nav class="rl-crumb" aria-label="Breadcrumb"><a href="{{ "projects/" | relURL }}">Projects</a> / Rulattice</nav>
+    <h1 class="rl-title">Rulattice</h1>
+    <p class="rl-lede">Translates detection queries between Sentinel, Splunk, Cortex, CrowdStrike and LogScale. When something has no exact equivalent, it says so instead of guessing.</p>
+    <div class="rl-actions">
+      <a class="kd-btn" href="{{ $app }}" rel="noopener">Open the translator</a>
+      <a class="kd-btn kd-btn--ghost" href="{{ $app }}docs" rel="noopener">Read the reference</a>
+    </div>
+    <p class="rl-fine">Free to use. Translation runs entirely in your browser, so your queries never leave the page.</p>
+  </header>
+
+  <section class="rl-specimen" aria-labelledby="rl-spec-h">
+    <div class="rl-specimen-inner">
+      <h2 id="rl-spec-h">One Cortex rule, four platforms</h2>
+      <p class="rl-spec-intro">A real detection: MMC opening a <code>.msc</code> file from a user-writable folder. It was translated with field mapping on. The notes under each output are the engine's own review items, unedited.</p>
+
+      <div class="rl-grid">
+        <figure class="rl-pane rl-pane--src">
+          <figcaption>{{ $spec.source.label }}, the source</figcaption>
+          <pre><code>{{ $spec.source.query }}</code></pre>
+        </figure>
+
+        <div class="rl-pane rl-pane--out">
+          {{- range $i, $t := $spec.targets }}
+          <input class="rl-tab-input" type="radio" name="rl-target" id="rl-t-{{ $t.id }}" {{ if eq $i 0 }}checked{{ end }}>
+          {{- end }}
+          <div class="rl-tabs" role="radiogroup" aria-label="Target platform">
+            {{- range $spec.targets }}
+            <label for="rl-t-{{ .id }}" class="rl-tab rl-tab--{{ .id }}">{{ .label }}<span>{{ .note }}</span></label>
+            {{- end }}
+          </div>
+          {{- range $spec.targets }}
+          <div class="rl-out rl-out--{{ .id }}">
+            <pre><code>{{ .query }}</code></pre>
+            <ul class="rl-notes">
+              {{- range .notes }}
+              <li class="rl-note rl-note--{{ .level }}"><b>{{ if eq .level "caution" }}Caution{{ else if eq .level "review" }}Review{{ else }}Note{{ end }}</b>{{ .msg }}</li>
+              {{- end }}
+              {{- if gt .total (len .notes) }}<li class="rl-more">{{ sub .total (len .notes) }} more in the translator</li>{{ end }}
+            </ul>
+          </div>
+          {{- end }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rl-section">
+    <h2>What it translates</h2>
+    <dl class="rl-dl">
+      <dt>Languages</dt>
+      <dd>Sentinel and Defender KQL, Splunk SPL, Cortex XQL, CrowdStrike CQL and Falcon LogScale, in any direction.</dd>
+      <dt>Filters</dt>
+      <dd>And, or, not, equality and numeric comparisons, contains, starts with, ends with, lists, regex and wildcards. Each platform's case sensitivity is preserved, not assumed.</dd>
+      <dt>Aggregation</dt>
+      <dd>Count, distinct count, sum, min, max and average by fields, with thresholds, sort and limit after the aggregation still pointing at the right column.</dd>
+      <dt>Computed fields</dt>
+      <dd><code>extend</code>, <code>eval</code>, <code>alter</code> and <code>:=</code>, renames, and scalar <code>let</code> constants, using one shared function set. SPL's 1-based <code>substr</code> becomes KQL's 0-based <code>substring</code> without you thinking about it.</dd>
+      <dt>Event classes</dt>
+      <dd>Cortex <code>ENUM</code> constants become the target's native selector: Defender XDR tables, SecurityEvent 4688 or ASIM for Sentinel; Sysmon or Security log event codes for Splunk; Falcon event names; ECS fields for LogScale.</dd>
+      <dt>Field mapping</dt>
+      <dd>Optional. Picks names for the data source you choose, and reports every rename so you can check it.</dd>
+    </dl>
+  </section>
+
+  <section class="rl-section">
+    <h2>What it refuses</h2>
+    <p>If a construct has no exact equivalent on the target, Rulattice returns no output and names the construct. Joins, lookups, time bucketing and functions outside the shared set are refused today.</p>
+    <p>That is deliberate. A refusal costs you a minute. A confident, wrong translation costs you a detection that never fires.</p>
+  </section>
+
+  <section class="rl-section">
+    <h2>How it checks itself</h2>
+    <p>Every output is parsed again in the target language and compared with the source. When the meaning survives the trip, the check passes. Anything it had to adapt is listed by severity:</p>
+    <dl class="rl-dl rl-dl--levels">
+      <dt><span class="rl-note--caution">Caution</span></dt>
+      <dd>The output can return more events than the source, such as an OS filter the target has no column for.</dd>
+      <dt><span class="rl-note--review">Review</span></dt>
+      <dd>Correct as written, but depends on your data: a mapped field name, a data source, an index to narrow.</dd>
+    </dl>
+  </section>
+
+  <footer class="rl-end">
+    <p>Built by Dan out here in the Arizona desert. The source is private for now; new detection packs and translation notes go out by email, about once a month.</p>
+    <div class="rl-actions">
+      <a class="kd-btn" href="{{ $app }}" rel="noopener">Open the translator</a>
+      <a class="kd-btn kd-btn--ghost" href="{{ $app }}#subscribe" rel="noopener">Get packs by email</a>
+    </div>
+  </footer>
+</article>
+{{- end }}

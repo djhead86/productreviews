@@ -496,3 +496,131 @@ body { overflow-x: hidden; }
 @media (max-width: 600px) {
     .kd-hero { background-position: 56% 55%; }
 }
+
+/* ============================================================
+   RULATTICE PROJECT PAGE
+   The specimen panel uses Rulattice's own teal-on-slate; everything
+   else stays in Kodiak Den's palette.
+   ============================================================ */
+.rl {
+    --rl-slate: #13232b;
+    --rl-pane: #1a2f38;
+    --rl-line: #2c4652;
+    --rl-teal: #4fd1b5;
+    --rl-ink: #dcebe7;
+    --rl-dim: #93b3ad;
+    --rl-amber: #e8a35a;
+}
+
+.rl-head { padding-top: 0.5rem; }
+.rl-crumb { font-size: 0.85rem; color: var(--secondary); margin-bottom: 1.2rem; }
+.rl-crumb a { color: var(--kd-accent); }
+.rl-title {
+    font-size: clamp(2.6rem, 9vw, 4.2rem);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 1;
+    margin: 0 0 1rem;
+}
+.rl-lede { font-size: 1.2rem; line-height: 1.55; max-width: 36rem; margin: 0 0 1.4rem; }
+.rl-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.rl-fine { font-size: 0.88rem; color: var(--secondary); margin: 1rem 0 0; }
+
+/* ----- Specimen (full bleed) ----- */
+.rl-specimen {
+    width: 100vw;
+    margin: 3rem 0 0 calc(50% - 50vw);
+    background-color: var(--rl-slate);
+    background-image:
+        repeating-linear-gradient(45deg, rgba(79, 209, 181, 0.045) 0 1px, transparent 1px 26px),
+        repeating-linear-gradient(-45deg, rgba(79, 209, 181, 0.045) 0 1px, transparent 1px 26px);
+    color: var(--rl-ink);
+}
+.rl-specimen-inner { max-width: 1120px; margin: 0 auto; padding: 3rem var(--gap) 3.2rem; }
+.rl-specimen h2 { color: #fff; font-size: 1.6rem; font-weight: 800; margin: 0 0 0.6rem; }
+.rl-spec-intro { color: var(--rl-dim); max-width: 44rem; margin: 0 0 1.8rem; line-height: 1.6; }
+.rl-specimen code { color: inherit; background: none; }
+.rl-spec-intro code { color: var(--rl-ink); }
+
+.rl-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 1.2rem; align-items: start; }
+
+.rl-pane { margin: 0; background: var(--rl-pane); border: 1px solid var(--rl-line); border-radius: 12px; overflow: hidden; }
+.rl-pane figcaption { font-size: 0.82rem; color: var(--rl-dim); padding: 0.75rem 1rem; border-bottom: 1px solid var(--rl-line); }
+.rl-pane pre {
+    margin: 0;
+    padding: 1rem;
+    background: transparent;
+    border-radius: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: var(--rl-ink);
+}
+.rl-pane--src pre { color: #b9cfca; }
+
+/* Tabs: radio inputs drive which output shows, no script needed */
+.rl-tab-input { position: absolute; opacity: 0; pointer-events: none; }
+.rl-tabs { display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--rl-line); }
+.rl-tab {
+    flex: 1 1 auto;
+    cursor: pointer;
+    padding: 0.65rem 0.9rem 0.6rem;
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: var(--rl-dim);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    line-height: 1.25;
+}
+.rl-tab span { display: block; font-weight: 400; font-size: 0.74rem; opacity: 0.8; }
+.rl-tab:hover { color: var(--rl-ink); }
+.rl-out { display: none; }
+
+#rl-t-kql-mde:checked ~ .rl-tabs .rl-tab--kql-mde,
+#rl-t-spl-sysmon:checked ~ .rl-tabs .rl-tab--spl-sysmon,
+#rl-t-cql:checked ~ .rl-tabs .rl-tab--cql,
+#rl-t-logscale:checked ~ .rl-tabs .rl-tab--logscale { color: #fff; border-bottom-color: var(--rl-teal); }
+
+#rl-t-kql-mde:focus-visible ~ .rl-tabs .rl-tab--kql-mde,
+#rl-t-spl-sysmon:focus-visible ~ .rl-tabs .rl-tab--spl-sysmon,
+#rl-t-cql:focus-visible ~ .rl-tabs .rl-tab--cql,
+#rl-t-logscale:focus-visible ~ .rl-tabs .rl-tab--logscale { outline: 2px solid var(--rl-teal); outline-offset: -4px; border-radius: 6px; }
+
+#rl-t-kql-mde:checked ~ .rl-out--kql-mde,
+#rl-t-spl-sysmon:checked ~ .rl-out--spl-sysmon,
+#rl-t-cql:checked ~ .rl-out--cql,
+#rl-t-logscale:checked ~ .rl-out--logscale { display: block; }
+
+.rl-notes { list-style: none; margin: 0; padding: 0.2rem 1rem 1rem; border-top: 1px solid var(--rl-line); }
+.rl-note { font-size: 0.82rem; line-height: 1.5; color: var(--rl-dim); padding: 0.55rem 0 0 0.8rem; border-left: 2px solid var(--rl-line); margin: 0.6rem 0 0; }
+.rl-note b { display: block; font-size: 0.78rem; margin-bottom: 0.1rem; }
+.rl-note--caution { border-left-color: var(--rl-amber); }
+.rl-note--caution b { color: var(--rl-amber); }
+.rl-note--review { border-left-color: var(--rl-teal); }
+.rl-note--review b { color: var(--rl-teal); }
+.rl-more { font-size: 0.8rem; color: var(--rl-dim); padding: 0.7rem 0 0 0.8rem; margin: 0; }
+
+/* ----- Body sections ----- */
+.rl-section { margin-top: 3rem; }
+.rl-section h2 { font-size: 1.45rem; font-weight: 800; margin: 0 0 1rem; }
+.rl-section p { line-height: 1.7; margin: 0 0 1rem; max-width: 40rem; }
+.rl-section code, .rl-dl code { font-size: 0.88em; }
+
+.rl-dl { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 0.9rem 1.4rem; margin: 0; }
+.rl-dl dt { font-weight: 700; padding-top: 0.05rem; }
+.rl-dl dd { margin: 0; line-height: 1.65; color: var(--content); }
+.rl-dl--levels dt span { font-weight: 700; border-left: 3px solid; padding-left: 0.5rem; }
+.rl-dl--levels .rl-note--caution { border-color: var(--kd-accent); color: var(--kd-accent); }
+.rl-dl--levels .rl-note--review { border-color: #2a9d86; color: #2a9d86; }
+:root[data-theme="dark"] .rl-dl--levels .rl-note--review { border-color: var(--rl-teal); color: var(--rl-teal); }
+
+.rl-end { margin-top: 3.2rem; padding-top: 1.6rem; border-top: 1px solid var(--border); }
+.rl-end p { color: var(--secondary); line-height: 1.65; max-width: 38rem; margin: 0 0 1.2rem; }
+
+@media (max-width: 760px) {
+    .rl-grid { grid-template-columns: 1fr; }
+    .rl-dl { grid-template-columns: 1fr; gap: 0.2rem; }
+    .rl-dl dd { margin-bottom: 0.9rem; }
+    .rl-tab { flex: 1 1 45%; }
+}
