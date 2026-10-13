@@ -1,0 +1,57 @@
+# Project cards for /projects/ and the homepage.
+# status: live | public | soon
+#   live   = has a site you can visit (url)
+#   public = public GitHub repo (repo)
+#   soon   = private for now; card shows "Coming soon" and no link
+# To publish a project later: flip status to public and add repo.
+
+- name: Rulattice
+  tagline: Security query translator
+  description: Translates detection queries between KQL, SPL, XQL, CQL and LogScale, and tells you exactly what it couldn't translate instead of guessing.
+  tags: [security, detection, typescript]
+  status: live
+  url: https://rulattice.kodiak-den.com/
+
+- name: Did It Fire
+  tagline: Detection validation
+  description: Adversary emulation meets detection validation. Run the attack, then prove whether the detection actually fired.
+  tags: [security, purple-team]
+  status: public
+  repo: https://github.com/djhead86/did-it-fire
+
+- name: Kodiak Den
+  tagline: This site
+  description: Hugo source for kodiak-den.com. Gear reviews, project pages, and whatever crawls out of the desert next.
+  tags: [hugo, web]
+  status: public
+  repo: https://github.com/djhead86/productreviews
+
+- name: Kodiak Picks
+  tagline: Sports betting analytics
+  description: ELO win probabilities, edge detection and quarter-Kelly sizing across the major leagues, with full bet tracking, ROI and closing line value.
+  tags: [python, fastapi, analytics]
+  status: soon
+
+- name: SmartPicks
+  tagline: The original picks dashboard
+  description: The first-generation betting model and static dashboard that Kodiak Picks grew out of.
+  tags: [python, javascript]
+  status: soon
+
+- name: Musical Intelligence
+  tagline: Song structure analysis
+  description: In-depth sonic analysis of a song's structure and composition.
+  tags: [music, python, audio]
+  status: soon
+
+- name: Live Sonifier
+  tagline: Your network, as a band
+  description: Turns live traffic on a network interface into MIDI. Packets in, music out.
+  tags: [music, midi, networking]
+  status: soon
+
+- name: Does It Shred
+  tagline: Barcodes to tablature
+  description: A simple Python script that converts barcodes into guitar tablature. Every can of soup is a riff.
+  tags: [music, python]
+  status: soon

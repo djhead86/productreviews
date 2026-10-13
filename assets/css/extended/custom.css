@@ -318,3 +318,177 @@ footer {
 footer a {
     color: var(--kd-accent) !important;
 }
+
+/* ============================================================
+   LANDING PAGE, PROJECTS, REVIEWS HUB
+   ============================================================ */
+
+body { overflow-x: hidden; }
+
+/* ----- Hero (full-bleed) ----- */
+.kd-hero {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-top: calc(var(--gap) * -1);
+    min-height: min(78vh, 720px);
+    display: flex;
+    align-items: flex-end;
+    background-color: #12060f;
+    background-size: cover;
+    background-position: center 60%;
+    color: #f6ead6;
+    overflow: hidden;
+}
+
+.kd-hero-shade {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to top, rgba(7,3,10,0.92) 0%, rgba(7,3,10,0.45) 38%, rgba(7,3,10,0) 70%),
+        radial-gradient(ellipse at 15% 100%, rgba(7,3,10,0.6), transparent 60%);
+}
+
+.kd-hero-inner {
+    position: relative;
+    width: 100%;
+    max-width: calc(var(--main-width) + var(--gap) * 2);
+    margin: 0 auto;
+    padding: 0 var(--gap) clamp(2rem, 6vh, 4rem);
+}
+
+.kd-hero-kicker {
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #e8a35a;
+    margin-bottom: 0.4rem;
+}
+
+.kd-hero-title {
+    font-size: clamp(2.6rem, 8vw, 4.6rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin: 0 0 0.8rem;
+    color: #fff4e2;
+    text-shadow: 0 2px 30px rgba(226,103,42,0.45);
+}
+
+.kd-hero-sub {
+    max-width: 34rem;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: #e9d9c2;
+    margin-bottom: 1.4rem;
+}
+
+.kd-hero-cta { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+
+.kd-btn--ghost {
+    background: transparent;
+    border: 1px solid currentColor;
+    color: var(--kd-accent) !important;
+}
+.kd-btn--ghost:hover {
+    background: var(--kd-accent) !important;
+    border-color: var(--kd-accent);
+    color: #fff !important;
+}
+.kd-hero .kd-btn--ghost { color: #f6ead6 !important; }
+
+/* ----- Home sections ----- */
+.kd-home-section { margin-top: 3rem; }
+
+.kd-section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+.kd-section-head h2 { font-size: 1.35rem; font-weight: 800; margin: 0; }
+.kd-section-head a { font-size: 0.88rem; color: var(--kd-accent); white-space: nowrap; }
+
+/* ----- Review cards ----- */
+.kd-review-grid { display: grid; gap: 0.9rem; }
+
+.kd-review-card {
+    display: block;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--kd-accent);
+    border-radius: var(--kd-radius);
+    padding: 1rem 1.2rem;
+    transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.kd-review-card:hover { box-shadow: var(--kd-shadow); transform: translateY(-2px); }
+.kd-review-card h3 { font-size: 1.05rem; margin: 0.2rem 0 0.35rem; color: var(--primary); }
+.kd-review-card p { font-size: 0.9rem; color: var(--secondary); margin: 0; line-height: 1.5; }
+.kd-review-date { font-size: 0.75rem; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* ----- Project cards ----- */
+.kd-project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+    gap: 1rem;
+}
+
+.kd-project {
+    display: flex;
+    flex-direction: column;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--kd-radius);
+    padding: 1.1rem 1.2rem;
+    transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.kd-project:hover { box-shadow: var(--kd-shadow); transform: translateY(-2px); }
+.kd-project--soon { border-style: dashed; }
+
+.kd-project-head { display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; }
+.kd-project-name { font-size: 1.1rem; font-weight: 800; margin: 0; }
+.kd-project-tagline { font-size: 0.82rem; color: var(--kd-accent); font-weight: 600; margin: 0.15rem 0 0.5rem; }
+.kd-project-desc { font-size: 0.9rem; color: var(--secondary); line-height: 1.5; margin: 0 0 0.8rem; flex: 1; }
+
+.kd-project-tags { list-style: none; padding: 0; margin: 0 0 0.9rem; display: flex; flex-wrap: wrap; gap: 4px; }
+.kd-project-tags li {
+    font-size: 0.72rem;
+    background: var(--code-bg);
+    color: var(--secondary);
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin: 0;
+}
+
+.kd-project-links { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+.kd-project-pending { font-size: 0.82rem; color: var(--secondary); font-style: italic; }
+
+.kd-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 9px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+.kd-badge--live   { background: #1f6b4a; color: #e9fff4; }
+.kd-badge--public { background: var(--kd-accent); color: #fff; }
+.kd-badge--soon   { background: var(--code-bg); color: var(--secondary); }
+
+/* ----- Reviews hub filter chips ----- */
+.kd-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.2rem 0 0.6rem; }
+.post-content .kd-filter a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.35rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    color: var(--primary);
+    box-shadow: none;
+    text-decoration: none;
+}
+.post-content .kd-filter a:hover { border-color: var(--kd-accent); color: var(--kd-accent); }

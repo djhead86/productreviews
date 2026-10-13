@@ -1,0 +1,50 @@
+{{- define "main" }}
+{{- /* Hero art: drop hero.webp / hero.jpg / hero.png into static/images/ and it replaces the placeholder. */ -}}
+{{- $hero := "/images/hero-placeholder.svg" -}}
+{{- range slice "hero.webp" "hero.jpg" "hero.png" -}}
+  {{- if and (eq $hero "/images/hero-placeholder.svg") (fileExists (printf "static/images/%s" .)) -}}
+    {{- $hero = printf "/images/%s" . -}}
+  {{- end -}}
+{{- end }}
+
+<section class="kd-hero" style="background-image: url('{{ $hero | relURL }}');">
+  <div class="kd-hero-shade"></div>
+  <div class="kd-hero-inner">
+    <p class="kd-hero-kicker">Est. somewhere past the last gas station</p>
+    <h1 class="kd-hero-title">Kodiak Den</h1>
+    <p class="kd-hero-sub">Gear reviews, security tools, and music experiments. Built by a bassist and security nerd somewhere out in the Arizona desert.</p>
+    <div class="kd-hero-cta">
+      <a class="kd-btn" href="{{ "posts/" | relURL }}">Gear Reviews</a>
+      <a class="kd-btn kd-btn--ghost" href="{{ "projects/" | relURL }}">Projects</a>
+    </div>
+  </div>
+</section>
+
+<section class="kd-home-section">
+  <div class="kd-section-head">
+    <h2>Latest gear reviews</h2>
+    <a href="{{ "posts/" | relURL }}">All reviews →</a>
+  </div>
+  <div class="kd-review-grid">
+    {{- range first 3 (where site.RegularPages "Section" "posts") }}
+    <a class="kd-review-card" href="{{ .RelPermalink }}">
+      <span class="kd-review-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      <h3>{{ .Title }}</h3>
+      {{- with .Description }}<p>{{ . }}</p>{{ end }}
+    </a>
+    {{- end }}
+  </div>
+</section>
+
+<section class="kd-home-section">
+  <div class="kd-section-head">
+    <h2>From the workshop</h2>
+    <a href="{{ "projects/" | relURL }}">All projects →</a>
+  </div>
+  <div class="kd-project-grid">
+    {{- range first 4 site.Data.projects }}
+      {{- partial "project-card.html" . }}
+    {{- end }}
+  </div>
+</section>
+{{- end }}

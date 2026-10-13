@@ -1,0 +1,19 @@
+{{- $p := . -}}
+<article class="kd-project kd-project--{{ $p.status }}">
+  <header class="kd-project-head">
+    <h3 class="kd-project-name">{{ $p.name }}</h3>
+    {{- if eq $p.status "live" }}<span class="kd-badge kd-badge--live">Live</span>
+    {{- else if eq $p.status "public" }}<span class="kd-badge kd-badge--public">Open source</span>
+    {{- else }}<span class="kd-badge kd-badge--soon">Coming soon</span>{{ end }}
+  </header>
+  {{- with $p.tagline }}<p class="kd-project-tagline">{{ . }}</p>{{ end }}
+  <p class="kd-project-desc">{{ $p.description }}</p>
+  {{- with $p.tags }}
+  <ul class="kd-project-tags">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+  {{- end }}
+  <div class="kd-project-links">
+    {{- with $p.url }}<a class="kd-btn" href="{{ . }}" rel="noopener">Visit site</a>{{ end }}
+    {{- with $p.repo }}<a class="kd-btn kd-btn--ghost" href="{{ . }}" rel="noopener">GitHub</a>{{ end }}
+    {{- if and (not $p.url) (not $p.repo) }}<span class="kd-project-pending">Still in the den</span>{{ end }}
+  </div>
+</article>

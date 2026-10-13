@@ -77,3 +77,14 @@ Tags drive the navigation menus. Use: `home-studio`, `podcasting`, `budget`, `co
 ## Site Config
 
 Edit `hugo.toml` to update the site title, description, social links, and menus.
+
+## Homepage Hero Art
+
+The homepage hero uses `static/images/hero-placeholder.svg` until a real image exists.
+Drop `hero.webp`, `hero.jpg`, or `hero.png` (about 2400x1350, under 500 KB) into `static/images/`
+and it is picked up automatically. Keep the lower-left third dark: the title sits there.
+
+## Projects
+
+Project cards live in `data/projects.yaml` (used by `/projects/` and the homepage).
+Set `status` to `live`, `public`, or `soon`. `soon` cards show no link, which is for private repos.

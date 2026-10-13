@@ -9,7 +9,7 @@ buildDrafts = false
 buildFuture = false
 
 [params]
-  description = "Honest gear reviews for home studio producers, podcasters, and music makers — from someone who actually uses this stuff."
+  description = "Gear reviews, security tools, and music experiments from the Arizona desert."
   author = "Dan"
   defaultTheme = "auto"
   ShowReadingTime = true
@@ -26,10 +26,6 @@ buildFuture = false
   disableScrollToTop = false
   math = false
 
-[params.homeInfoParams]
-  Title = "Gear Reviews You Can Trust"
-  Content = "I make music, host a podcast, and have spent way too much money on gear. Here's what's actually worth buying."
-
 [params.profileMode]
   enabled = false
 
@@ -42,30 +38,20 @@ buildFuture = false
 
 [menu]
   [[menu.main]]
-    identifier = "home-studio"
-    name = "Home Studio"
-    url = "/tags/home-studio/"
+    identifier = "reviews"
+    name = "Gear Reviews"
+    url = "/posts/"
     weight = 10
   [[menu.main]]
-    identifier = "podcasting"
-    name = "Podcasting"
-    url = "/tags/podcasting/"
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
     weight = 20
-  [[menu.main]]
-    identifier = "budget-picks"
-    name = "Budget Picks"
-    url = "/tags/budget/"
-    weight = 30
-  [[menu.main]]
-    identifier = "comparisons"
-    name = "Comparisons"
-    url = "/tags/comparison/"
-    weight = 40
   [[menu.main]]
     identifier = "rulattice"
     name = "Rulattice"
     url = "https://rulattice.kodiak-den.com/"
-    weight = 50
+    weight = 30
 
 [markup.goldmark.renderer]
   unsafe = true
