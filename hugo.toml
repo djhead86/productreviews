@@ -11,6 +11,7 @@ buildFuture = false
 [params]
   description = "Gear reviews, security tools, and music experiments from the Arizona desert."
   author = "Dan"
+  images = ["images/og-card.jpg"]
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = false
