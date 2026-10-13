@@ -61,6 +61,11 @@ buildFuture = false
     name = "Comparisons"
     url = "/tags/comparison/"
     weight = 40
+  [[menu.main]]
+    identifier = "rulattice"
+    name = "Rulattice"
+    url = "https://rulattice.kodiak-den.com/"
+    weight = 50
 
 [markup.goldmark.renderer]
   unsafe = true
