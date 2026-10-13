@@ -492,3 +492,7 @@ body { overflow-x: hidden; }
     text-decoration: none;
 }
 .post-content .kd-filter a:hover { border-color: var(--kd-accent); color: var(--kd-accent); }
+
+@media (max-width: 600px) {
+    .kd-hero { background-position: 56% 55%; }
+}
