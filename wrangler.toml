@@ -1,5 +1,10 @@
 name = "productreviews"
 compatibility_date = "2024-09-23"
 
+main = "worker/index.js"
+
 [assets]
 directory = "./public"
+binding = "ASSETS"
+# Only audio needs the Worker (byte ranges for streaming and seeking); everything else is served directly.
+run_worker_first = ["/music/*"]
