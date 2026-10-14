@@ -1,0 +1,8 @@
+{{- /* Album cover: cover.webp in the album folder if present, otherwise a typographic placeholder. */ -}}
+{{- $a := .album -}}
+{{- $file := printf "static%s%s" $a.base $a.cover -}}
+{{- if fileExists $file }}
+<img class="kd-cover" src="{{ printf "%s%s" $a.base $a.cover | relURL }}" alt="Album cover for {{ $a.title }}" width="1024" height="1024" {{ with .eager }}fetchpriority="high"{{ else }}loading="lazy"{{ end }}>
+{{- else }}
+<div class="kd-cover kd-cover--type" role="img" aria-label="Album cover for {{ $a.title }}"><span>{{ $a.title }}</span><small>{{ $a.artist }}</small></div>
+{{- end }}

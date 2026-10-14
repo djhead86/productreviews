@@ -44,6 +44,11 @@ buildFuture = false
     url = "/posts/"
     weight = 10
   [[menu.main]]
+    identifier = "music"
+    name = "Music"
+    url = "/music/"
+    weight = 15
+  [[menu.main]]
     identifier = "projects"
     name = "Projects"
     url = "/projects/"

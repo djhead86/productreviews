@@ -1,0 +1,17 @@
+{{- define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}<div class="post-description">{{ . }}</div>{{ end }}
+</header>
+<div class="kd-albums">
+  {{- range where .Pages "Params.album" "!=" nil }}
+  {{- $a := index site.Data.albums .Params.album }}
+  {{- $secs := 0 }}{{ range $a.tracks }}{{ $secs = add $secs .seconds }}{{ end }}
+  <a class="kd-album-card" href="{{ .RelPermalink }}">
+    {{ partial "album-cover.html" (dict "album" $a) }}
+    <span class="kd-album-card-title">{{ $a.title }}</span>
+    <span class="kd-album-card-meta">{{ $a.artist }}, {{ len $a.tracks }} tracks, {{ div $secs 60 }} min</span>
+  </a>
+  {{- end }}
+</div>
+{{- end }}

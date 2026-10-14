@@ -1,0 +1,61 @@
+title: dual primed, duel initiated
+slug: dual-primed-duel-initiated
+artist: beerforblood
+base: /music/dual-primed-duel-initiated/
+cover: cover.webp
+tracks:
+- n: 1
+  title: Feliz Navidad, pinche cabron
+  file: 01-feliz-navidad-pinche-cabron.mp3
+  art: art/01-feliz-navidad-pinche-cabron.webp
+  seconds: 210
+- n: 2
+  title: If It's You or Me
+  file: 02-if-its-you-or-me.mp3
+  art: art/02-if-its-you-or-me.webp
+  seconds: 194
+- n: 3
+  title: Lost in Anatolia
+  file: 03-lost-in-anatolia.mp3
+  art: art/03-lost-in-anatolia.webp
+  seconds: 165
+- n: 4
+  title: Fractal Skin
+  file: 04-fractal-skin.mp3
+  art: art/04-fractal-skin.webp
+  seconds: 207
+- n: 5
+  title: Breathing
+  file: 05-breathing.mp3
+  art: art/05-breathing.webp
+  seconds: 216
+- n: 6
+  title: Nobody Home
+  file: 06-nobody-home.mp3
+  art: art/06-nobody-home.webp
+  seconds: 197
+- n: 7
+  title: Apparently
+  file: 07-apparently.mp3
+  art: art/07-apparently.webp
+  seconds: 178
+- n: 8
+  title: One Foot in the Grave
+  file: 08-one-foot-in-the-grave.mp3
+  art: art/08-one-foot-in-the-grave.webp
+  seconds: 182
+- n: 9
+  title: I Need a Little Room
+  file: 09-i-need-a-little-room.mp3
+  art: art/09-i-need-a-little-room.webp
+  seconds: 215
+- n: 10
+  title: Night Shift
+  file: 10-night-shift.mp3
+  art: art/10-night-shift.webp
+  seconds: 170
+- n: 11
+  title: Lost in Anatolia II (It happened again)
+  file: 11-lost-in-anatolia-ii-it-happened-again.mp3
+  art: art/11-lost-in-anatolia-ii-it-happened-again.webp
+  seconds: 171
