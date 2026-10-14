@@ -5,9 +5,9 @@ base: /music/dual-primed-duel-initiated/
 cover: cover.webp
 tracks:
 - n: 1
-  title: Untitled Project
-  file: 01-untitled-project.mp3
-  art: art/01-untitled-project.webp
+  title: Feliz Navidad, pinche cabron
+  file: 01-feliz-navidad-pinche-cabron.mp3
+  art: art/01-feliz-navidad-pinche-cabron.webp
   seconds: 210
 - n: 2
   title: If It's You or Me
