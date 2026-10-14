@@ -1,7 +1,7 @@
 ---
 title: "Novation Launchkey 49 MK4 vs Arturia KeyLab Essential 49 mk3 (2026): Which 49-Key Controller Should You Buy?"
-date: 2026-10-13
-draft: true
+date: 2026-10-14
+draft: false
 description: "Two 49-key MIDI controllers about $30 apart. One is built around Ableton Live, the other around sound browsing and every DAW. Here's how to pick."
 tags: ["home-studio", "midi-controller", "comparison", "novation", "arturia", "ableton"]
 categories: ["Comparisons"]
@@ -13,7 +13,6 @@ The Novation Launchkey 49 MK4 and the Arturia KeyLab Essential 49 mk3 are the tw
 
 They are not the same keyboard. One is built to drive Ableton Live from the keys. The other is built to make finding and playing sounds easy in whatever software you use.
 
-<!-- CHECK: confirm you own and gig the Launchkey 49 MK4 specifically (49 keys, MK4). -->
 I play the Launchkey 49 MK4 in my live rig, where it handles note input next to a Push 3 and a Launchpad Pro. I haven't owned the KeyLab Essential, so that side of this comparison comes from Arturia's specs and the published reviews, not my hands.
 
 ---
@@ -52,8 +51,7 @@ Prices move a lot on these. Check the current price before you decide on a $30 g
 
 Both keybeds are synth-style actions that try to feel a little heavier than a toy. Novation calls the Launchkey's keys semi-weighted; Arturia describes a hybrid synth-piano feel.
 
-<!-- CHECK: your honest take on the Launchkey keybed (heft, noise, how it plays fast parts). -->
-On the Launchkey, the keys are fine for bass lines, pads and chord parts, and fast enough for lead lines. They are not a substitute for a weighted 88 if you're learning piano, and nothing in this price class is.
+I like the Launchkey's keybed. It's fully functional for bass lines, pad parts and chords, and it never gets in the way. My one wish is that it were weighted. If you're learning piano, a weighted 88 is a different purchase, and nothing in this price class replaces one.
 
 Neither keyboard lists aftertouch on the keys. On both, pressure expression lives in the pads.
 
@@ -67,8 +65,7 @@ The Launchkey gives you **16 pads with polyphonic aftertouch**. Each pad reads i
 
 The KeyLab Essential has **8 pressure-sensitive pads** across two banks. That's workable for triggering drums and loops, but it's half the playing surface at once.
 
-<!-- CHECK: do you actually use the Launchkey pads live, or does the Launchpad Pro handle all of that? Adjust this line. -->
-In my setup the Launchpad Pro handles scene launching, so the Launchkey's pads mostly see drum and chord duty. If this is your only controller, those 16 pads matter even more.
+In my rig I barely touch the Launchkey's pads: Push 3 handles finger drumming and the Launchpad Pro launches scenes. What I use constantly on the Launchkey are the faders. If this is your only controller, though, those 16 pads are the biggest reason to pick it.
 
 ---
 
@@ -88,8 +85,7 @@ The KeyLab's **2.5" LCD** is the nicer screen, and it's the heart of how that ke
 
 **KeyLab Essential 49 mk3:** Ships with scripts for Ableton, Logic, FL Studio, Cubase and Bitwig, and its tightest integration is with Arturia's own Analog Lab and V Collection.
 
-<!-- CHECK: confirm the Launchkey plays nicely as a second control surface next to Push 3 in your Live set. -->
-If Ableton is your home, the Launchkey behaves like part of the program. I run it alongside Push 3 in the same Live set without fighting over controls, once each surface is assigned its own slot in Live's MIDI preferences.
+If Ableton is your home, the Launchkey behaves like part of the program. I run it alongside Push 3 in the same Live set and it runs clean, with each surface assigned its own slot in Live's MIDI preferences.
 
 ---
 

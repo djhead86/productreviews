@@ -1,7 +1,7 @@
 ---
 title: "Ableton Push 3 Review (2026): Standalone or Controller, and Is It Worth It?"
-date: 2026-10-13
-draft: true
+date: 2026-10-14
+draft: false
 description: "I use a Push 3 Standalone as the center of my live rig. Here's what it does well, what it doesn't, and which version to buy."
 tags: ["home-studio", "midi-controller", "ableton", "live-performance"]
 categories: ["Gear Reviews"]
@@ -9,7 +9,6 @@ ShowToc: true
 TocOpen: true
 ---
 
-<!-- CHECK: confirm Push 3 Standalone is the hub of your live rig, with Launchkey for notes and Launchpad Pro for scenes. -->
 Push 3 Standalone is the center of my live setup. A Launchkey handles note input, a Launchpad Pro launches scenes, and Push runs the set, the sounds and the audio. No laptop on stage.
 
 That's the pitch for Push 3: Ableton Live in an instrument you can play without a computer. It mostly delivers. It's also expensive, heavy, and has a few limits you should know about before you spend this kind of money.
@@ -46,8 +45,7 @@ List prices are the ceiling. Push 3 Standalone has been discounted heavily durin
 
 The 64 pads are the best thing about Push 3. They're MPE pads: each one reads pressure and where your finger sits on it, so you can bend, swell and vibrato notes by moving your finger, not just hit them.
 
-<!-- CHECK: your take on the pads for drums vs melodic playing; edit to match what you actually do with them. -->
-For drums they're responsive and even. For melodic parts, MPE is the part that surprised me. Pads go from "trigger" to "instrument" once you play a synth patch that responds to pressure and slide.
+I use them two ways: finger-drumming beats, and playing chords for pad sounds. For drums they're responsive and even. For chords, MPE is what makes them more than triggers: lean into a pad sound and it swells, slide and it moves.
 
 There's also a jog wheel for editing and navigation, which is a real upgrade over Push 2's clip editing on the encoders alone.
 
@@ -57,13 +55,11 @@ There's also a jog wheel for editing and navigation, which is a real upgrade ove
 
 In standalone mode Push 3 runs Live's instruments and effects, your Packs and your own samples, on the computer inside it. Sets move between Push and your desktop Live over Wi-Fi.
 
-<!-- CHECK: does about 2.5 hours of battery match your experience? Do you run it on the wall at gigs? -->
-Ableton quotes about 2.5 hours on battery, and independent reviews found the same. That's a rehearsal or a couch session, not a festival day. At gigs, plug it in.
+Ableton quotes about 2.5 hours on battery, and that matches what I get. That's a rehearsal or a couch session, not a long gig. At gigs I run it on wall power.
 
 The hard limit: **no third-party plugins in standalone mode.** If your sound depends on Serum, FabFilter or your favorite amp sim, those don't come with you. Everything has to be built from Ableton's own devices, or bounced to audio first.
 
-<!-- CHECK: do you rebuild or resample anything for standalone sets (e.g. FabFilter or Amplitube parts)? Add a line about your workflow if so. -->
-For live sets that's manageable. I build the set on the desktop, bounce anything that depends on a third-party plugin, and Push plays the rest.
+For live sets that's manageable, and it's what I do: build the set on the desktop, bounce anything that depends on a third-party plugin, and let Push play the rest. It works fine.
 
 ---
 
@@ -79,8 +75,7 @@ Both versions include a built-in audio interface:
 
 What it doesn't have: **XLR inputs and phantom power.** There's no mic preamp.
 
-<!-- CHECK: confirm how you record vocals (SM58 via XLR-to-1/4" on high-gain, or something else). -->
-I use Push as my audio interface, and for scratch vocals I run an SM58 into it with an XLR-to-1/4" cable on the high-gain setting. That works for a dynamic mic and demo takes. A condenser mic needs phantom power, which means an external preamp or a different interface. If recording vocals or acoustic instruments is a big part of what you do, budget for that.
+I use Push as my audio interface, and the workaround is simple. My Audio-Technica condenser runs through an inline phantom power supply, then into Push. It works, but it's an extra box and an extra cable on the desk. A dynamic mic can go straight in on the high-gain setting. If recording vocals or acoustic instruments is a big part of what you do, budget for a phantom supply or a separate interface.
 
 For bass, the instrument inputs are a good fit. A bass straight in, or the line out of a pedal like a Darkglass, records cleanly.
 

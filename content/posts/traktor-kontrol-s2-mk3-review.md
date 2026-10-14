@@ -1,7 +1,7 @@
 ---
 title: "Traktor Kontrol S2 MK3 Review (2026): Still Worth It for Bedroom DJs?"
-date: 2026-10-13
-draft: true
+date: 2026-10-14
+draft: false
 description: "The S2 MK3 is the controller I DJ on. It's simple, solid and easy to learn, but it's getting hard to buy new. Here's what to know."
 tags: ["dj", "dj-controller", "native-instruments", "traktor", "budget"]
 categories: ["Gear Reviews"]
@@ -9,8 +9,7 @@ ShowToc: true
 TocOpen: true
 ---
 
-<!-- CHECK: confirm you DJ on the Kontrol S2 MK3 and how long you've used it. -->
-The Traktor Kontrol S2 MK3 is the controller I DJ on at home. It's a two-deck controller from Native Instruments, built to run Traktor Pro, with a mixer, jog wheels, pads and an audio interface in one bus-powered box.
+The Traktor Kontrol S2 MK3 is the controller I've DJed on at home for five years. It's a two-deck controller from Native Instruments, built to run Traktor Pro, with a mixer, jog wheels, pads and an audio interface in one bus-powered box.
 
 It's a good controller. It's also getting hard to buy new: Native Instruments lists it as sold out, and some major retailers no longer carry it. So this review covers two questions: is it good, and should you hunt one down?
 
@@ -46,8 +45,7 @@ It's a good controller. It's also getting hard to buy new: Native Instruments li
 
 The S2 MK3 is laid out like a classic two-deck setup with a mixer in the middle. If you learn on it, the skills carry straight over to club gear: EQs, filters, volume faders, cueing in headphones.
 
-<!-- CHECK: your take on the jog wheels and pads; edit to match. -->
-The jog wheels are touch-sensitive and good for nudging and scratching at a bedroom level. They're not motorized like the S4 MK3's Haptic Drive jogs, so they don't push back or simulate a turntable, but for beat-matching by ear and adjusting a mix they do the job.
+The jog wheels are touch-sensitive and fine for nudging and light scratching. They're not motorized like the S4 MK3's Haptic Drive jogs, and that's the one upgrade I keep wishing for: haptic jogs push back and give you cue-point bumps you can feel. For beat-matching by ear and adjusting a mix, the S2's jogs do the job.
 
 The 16 pads cover hot cues, loops and samples. Each channel has a single mixer FX knob, which is the fastest way to add a filter sweep or a wash without digging into menus.
 
@@ -70,8 +68,7 @@ It's USB bus-powered, so there's no power brick to forget. That also means it ru
 
 New units include full Traktor Pro, now Traktor Pro 4, plus Traktor DJ 2. The S2 MK3 is mapped out of the box, and it supports Traktor's Stems format.
 
-<!-- CHECK: confirm you run it on Traktor Pro on a laptop (vs iPad/Traktor DJ 2), and which Traktor version. -->
-I run it with Traktor Pro on a laptop. Traktor's sync and beatgrids make it easy to focus on track selection and transitions while you're learning, and you can turn the help off as you get better.
+I run it from my laptop. Traktor's sync and beatgrids make it easy to focus on track selection and transitions while you're learning, and you can turn the help off as you get better.
 
 ---
 
@@ -115,8 +112,7 @@ Who should look elsewhere:
 
 ## Bottom Line
 
-<!-- CHECK: does this closing line match your opinion of the S2 MK3? -->
-The S2 MK3 is still a great way to learn and play Traktor at home. It's the controller I use, and it hasn't held me back. The only real problem is buying one: grab it used or near list, and if you already know you'll outgrow two decks, start with a four-deck controller instead.
+The S2 MK3 is still a great way to learn and play Traktor at home. Five years in, it's still the controller I use, and it hasn't held me back. The only real problem is buying one: grab it used or near list, and if you already know you'll outgrow two decks, start with a four-deck controller instead.
 
 ---
 
