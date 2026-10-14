@@ -68,7 +68,7 @@ It's USB bus-powered, so there's no power brick to forget. That also means it ru
 
 New units include full Traktor Pro, now Traktor Pro 4, plus Traktor DJ 2. The S2 MK3 is mapped out of the box, and it supports Traktor's Stems format.
 
-I run it from my laptop. Traktor's sync and beatgrids make it easy to focus on track selection and transitions while you're learning, and you can turn the help off as you get better.
+I run it with Traktor DJ 2 on my laptop. It's the simpler of the two apps, and for two decks at home it's all I've needed. Sync and beatgrids let you focus on track selection and transitions while you're learning, and you can turn the help off as you get better. If you outgrow it, Traktor Pro 4 is in the box.
 
 ---
 
