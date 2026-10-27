@@ -14,6 +14,15 @@
   url: https://rulattice.kodiak-den.com/
   page: /projects/rulattice/
 
+- name: Bass Woodshed
+  tagline: Metronome + neck map for bass
+  description: An odd-meter metronome with accent groupings, subdivisions and a speed trainer, plus a 4, 5 and 6 string neck map for scales, modes, diatonic chord overlays, arpeggios and box positions. One page, nothing to install.
+  tags: [music, bass, practice, javascript]
+  status: live
+  url: https://djhead86.github.io/kodiak-woodshed/
+  repo: https://github.com/djhead86/kodiak-woodshed
+  page: /projects/woodshed/
+
 - name: Kodiak Den
   tagline: This site
   description: Hugo source for kodiak-den.com. Gear reviews, project pages, and whatever crawls out of the desert next.
